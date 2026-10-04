@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Grammar Cheatsheets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@500;600&display=swap">
+<style>
+:root{--bg:#f6f8f9;--card:#fff;--ink:#1b2a33;--mute:#5a6b75;--line:#d5dde2;--verb:#0b6e8a;--trap:#a4302a;--trapbg:#fbeeed;--ok:#1f6b3a;
+box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181d;--card:#172229;--ink:#e6edf0;--mute:#9bacb5;--line:#2b3b44;--verb:#5cc4e0;--trap:#f08a82;--trapbg:#2a1b1b;--ok:#7bd69a}}
+:root[data-theme="dark"]{--bg:#10181d;--card:#172229;--ink:#e6edf0;--mute:#9bacb5;--line:#2b3b44;--verb:#5cc4e0;--trap:#f08a82;--trapbg:#2a1b1b;--ok:#7bd69a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Serif 4",Georgia,serif}
+main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+h1,h2,h3{font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.25}
+h1{font-size:2rem;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 22px}
+h2{font-size:1.2rem;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:0 0 16px}
+.core{border-left:5px solid var(--verb)}
+.rule{margin:0 0 10px}
+.trap{background:var(--trapbg);border-left:4px solid var(--trap);padding:8px 12px;margin:0 0 10px;font-size:.96rem}
+.trap strong{color:var(--trap);font-family:"IBM Plex Sans",system-ui,sans-serif}
+ul{margin:0;padding-left:20px}
+li{margin:3px 0}
+u{text-decoration-thickness:2px;text-underline-offset:3px}
+b{color:var(--verb)}
+.note{color:var(--mute);font-size:.9rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.wrap{overflow-x:auto}
+.form{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.9rem;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;margin:0 0 10px}.key{font-size:.9rem;color:var(--mute);margin:0 0 18px}
+@media print{body{background:#fff}.card{break-inside:avoid}.card.big{break-inside:auto}h2{break-after:avoid}}
+
+.bar{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+padding:10px 18px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+.bar-in{max-width:760px;margin:0 auto}
+.search{display:flex;gap:8px;align-items:center}
+#q{flex:1;font:16px "IBM Plex Sans",system-ui,sans-serif;padding:9px 12px;border:1px solid var(--line);
+border-radius:8px;background:var(--card);color:var(--ink)}
+#q:focus{outline:2px solid var(--verb)}
+#count{font:.85rem "IBM Plex Sans",system-ui,sans-serif;color:var(--mute);white-space:nowrap}
+.chips{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px}
+.chip{font:.85rem "IBM Plex Sans",system-ui,sans-serif;border:1px solid var(--line);background:var(--card);
+color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--verb);color:var(--bg);border-color:var(--verb)}
+.topic{margin-bottom:40px}
+.topic h1{font-size:1.6rem;margin-top:24px}
+mark{background:#ffe27a;color:#1b2a33;border-radius:2px;padding:0 1px}
+.empty{display:none;text-align:center;color:var(--mute);padding:40px 0}
+.footnote{color:var(--mute);font-size:.9rem;margin:0 0 16px}
+.hide{display:none!important}
+@media print{.bar{display:none}}
+</style></head><body>
+<div class="bar"><div class="bar-in">
+<div class="search"><input id="q" type="search" placeholder="Search all sheets (press / to focus)" autocomplete="off"><span id="count"></span></div>
+<div class="chips"><button class="chip on" data-f="all">All</button><button class="chip" data-f="s0">Verb patterns</button><button class="chip" data-f="s1">Conditionals</button><button class="chip" data-f="s2">Conjunctions</button><button class="chip" data-f="s3">Adverb clauses</button><button class="chip" data-f="s4">Adjective clauses</button><button class="chip" data-f="s5">Noun clauses</button><button class="chip" data-f="s6">Participial phrases</button><button class="chip" data-f="s7">Agreement</button></div></div></div>
+<main><section class="topic" id="s0" data-topic="s0"><h1>Verb Patterns: Gerunds and Infinitives Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> part is the pattern that follows the <b>blue bold</b> verb or expression.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule">Verb patterns describe what form follows a verb: a gerund (-ing), an infinitive (to + verb), or a bare infinitive. Each verb takes its own pattern, so you need to learn the groups.</p><p class="trap"><strong>Trap:</strong> The -ing form has different jobs: a <em>gerund</em> is a noun ("Studying is tiring"); a <em>present participle</em> is a verb or adjective ("I am studying", "an interesting movie").</p><ul><li>I enjoy <u>having</u> a bath in the evening. (gerund)</li><li>I want <u>to leave</u> early. (infinitive)</li><li>The movie is <u>interesting</u>. (participle as adjective)</li></ul></div><div class="card" data-title="1. Verbs followed by a gerund">
+<h2>1. Verbs followed by a gerund</h2>
+<p class="rule"><strong>Feelings:</strong> enjoy, dislike, fancy, mind, appreciate, tolerate, miss, can't stand, can't help.<br/><strong>Doing and avoiding:</strong> avoid, finish, complete, keep, delay, postpone, practice, risk, involve.<br/><strong>Talking and thinking:</strong> discuss, suggest, recommend, admit, deny, mention, report, recall, consider, imagine, anticipate.</p><p class="trap"><strong>Trap:</strong> <em>Suggest</em> and <em>recommend</em> take a gerund (not "suggest me to go"). Learn them as a list.</p>
+<ul>
+<li>She avoided <u>telling</u> him about her plans.</li>
+<li>Do you mind <u>giving</u> me a hand?</li>
+<li>She admitted <u>stealing</u> the money.</li>
+</ul>
+</div><div class="card" data-title="2. Verbs followed by an infinitive">
+<h2>2. Verbs followed by an infinitive</h2>
+<p class="rule"><strong>Plans and wishes:</strong> decide, hope, plan, want, intend, expect, arrange, choose, prepare, would like/love/hate.<br/><strong>Agreeing and offering:</strong> promise, agree, offer, refuse, demand, ask.<br/><strong>Ability and appearance:</strong> manage, afford, learn, pretend, claim, seem, appear, tend.</p><p class="trap"><strong>Trap:</strong> <em>Expect</em> takes an infinitive, but <em>anticipate</em> takes a gerund: "I expect to arrive" vs "I anticipate arriving".</p>
+<ul>
+<li>They plan <u>to start</u> college in the autumn.</li>
+<li>I promise <u>to help</u> you tomorrow.</li>
+<li>Unfortunately, we can't afford <u>to buy</u> a new car.</li>
+</ul>
+</div><div class="card big" data-title="3. Verb + object + infinitive, and make / let / have / get">
+<h2>3. Verb + object + infinitive, and make / let / have / get</h2>
+<p class="rule"><strong>Object + infinitive and bare infinitive</strong></p><p class="form">verb + object + (to) infinitive</p><p class="rule"><strong>Object + infinitive:</strong> want, ask, expect, would prefer.<br/><strong>Bare infinitive:</strong> <em>make</em> and <em>let</em> (<em>help</em> takes either).</p><p class="trap"><strong>Trap:</strong> Don't put "to" after <em>make</em>: "She makes me carry" (not "to carry"). After <em>recommend</em> and <em>suggest</em>, don't use object + infinitive: say "I recommend taking" or "I recommend that you take".</p><p class="rule"><strong>Make, let, have, get</strong></p><p class="rule"><em>Make/let/have</em> + object + bare infinitive.<br/><em>Get</em> + object + to-infinitive.<br/><em>Have/get</em> + object + past participle (for services).</p><p class="trap"><strong>Trap:</strong> <em>Get</em> needs <em>to</em>; <em>make</em> doesn't.</p>
+<ul>
+<li>I would prefer <u>you to come</u> early.</li>
+<li>She makes <u>me carry</u> the bags.</li>
+<li>She helped <u>me (to) carry</u> my suitcases.</li>
+<li>She <b>makes</b> me <u>carry</u> the bags.</li>
+<li>I <b>got</b> him <u>to help</u>.</li>
+<li>We <b>had</b> the car <u>repaired</u>.</li>
+</ul>
+</div><div class="card big" data-title="4. Preposition + gerund">
+<h2>4. Preposition + gerund</h2>
+<p class="rule"><strong>After a preposition</strong></p><p class="rule">After a preposition, always use the -ing form, even when the preposition is "to".</p><p class="trap"><strong>Trap:</strong> In <em>look forward to</em>, <em>accustomed to</em>, and <em>devoted to</em>, "to" is a preposition. Use -ing, not the base verb.</p><p class="rule"><strong>Adjective + preposition</strong></p><p class="rule"><strong>about:</strong> excited, worried<br/><strong>for:</strong> known, famous, sorry<br/><strong>of:</strong> proud, scared, sick<br/><strong>on:</strong> keen · <strong>to:</strong> addicted · <strong>in:</strong> interested</p><p class="trap"><strong>Trap:</strong> The adjective decides the preposition. Learn each pair together.</p><p class="rule"><strong>Verb or noun + preposition</strong></p><p class="rule"><strong>Verbs:</strong> carry on, keep on, insist on, succeed in, cope with, worry about, blame (someone) for.<br/><strong>Nouns:</strong> habit of, talent for, experience in, reputation for, disadvantage of.</p><p class="trap"><strong>Trap:</strong> The preposition belongs to the verb or noun, not the gerund. Don't drop it.</p>
+<ul>
+<li>She is looking forward to <u>visiting</u> her aunt.</li>
+<li>I'm tired of <u>repeating</u> the same things.</li>
+<li>He apologized for <u>being</u> late.</li>
+<li>My wife is keen on <u>singing</u> pop songs.</li>
+<li>The actor is famous for <u>being</u> crazy once in a while.</li>
+<li>The hikers are worried about <u>not having</u> enough water.</li>
+<li>She <b>succeeds in</b> <u>keeping</u> the children busy.</li>
+<li>He <b>insisted on</b> <u>taking</u> the dog for a walk.</li>
+<li>She has a <b>talent for</b> <u>learning</u> languages.</li>
+</ul>
+</div><div class="card" data-title="5. Verbs that take both (meaning changes)">
+<h2>5. Verbs that take both (meaning changes)</h2>
+<p class="rule">Some verbs take either form, but the meaning differs.</p><p class="trap"><strong>Trap:</strong> Watch the time order: stop doing = quit; stop to do = pause in order to do something.</p>
+<ul>
+<li>I <b>remember</b> <u>locking</u> the door. (I did it) / I <b>remembered</b> <u>to lock</u> the door. (I did not forget)</li>
+<li>He <b>stopped</b> <u>smoking</u>. (quit) / He <b>stopped</b> <u>to smoke</u>. (paused in order to smoke)</li>
+<li>I <b>tried</b> <u>adding</u> salt. (experiment) / I <b>tried</b> <u>to add</u> salt. (attempt)</li>
+</ul>
+</div><div class="card" data-title="6. Verbs that take both forms with little change">
+<h2>6. Verbs that take both forms with little change</h2>
+<p class="rule">Begin, start, continue, like, love, hate, prefer take either -ing or to + verb with almost the same meaning. After <em>would like/love/hate/prefer</em>, use the infinitive.</p><p class="trap"><strong>Trap:</strong> "I'd like swimming" is wrong. "I like swimming" is a general liking; "I'd like to swim" is a wish.</p>
+<ul>
+<li>She began <u>to cry</u> / <u>crying</u>.</li>
+<li>I like <u>swimming</u>. / I would like <u>to swim</u> today.</li>
+<li>He prefers <u>to walk</u> / <u>walking</u>.</li>
+</ul>
+</div><div class="card" data-title="7. Used to / be used to / get used to">
+<h2>7. Used to / be used to / get used to</h2>
+<p class="rule"><em>Used to</em> + base verb = a past habit. <em>Be/get used to</em> + -ing or noun = accustomed to.</p><p class="trap"><strong>Trap:</strong> "I'm used to get up early" is wrong. "To" here is a preposition, so use -ing.</p>
+<ul>
+<li>I <b>used to</b> <u>live</u> in Spain.</li>
+<li>I <b>am used to</b> <u>getting</u> up early.</li>
+<li>She <b>got used to</b> <u>working</u> nights.</li>
+</ul>
+</div><div class="card" data-title="8. Fixed -ing expressions">
+<h2>8. Fixed -ing expressions</h2>
+<p class="rule">Some expressions are always followed by -ing: spend/waste time, go + activity, it's worth, it's no use, have trouble/difficulty, be busy, can't help.</p><p class="trap"><strong>Trap:</strong> Don't add "to" or "in" after them in these frames.</p>
+<ul>
+<li>He <b>spends</b> hours <u>studying</u>.</li>
+<li>They <b>went</b> <u>shopping</u>.</li>
+<li>It's <b>no use</b> <u>complaining</u>. / It's <b>worth</b> <u>visiting</u>.</li>
+</ul>
+</div><div class="card" data-title="9. Too / enough + infinitive">
+<h2>9. Too / enough + infinitive</h2>
+<p class="rule"><em>Too</em> + adjective + to + verb (negative result). Adjective + <em>enough</em> + to + verb (positive result).</p><p class="trap"><strong>Trap:</strong> <em>Enough</em> comes after the adjective but before a noun: "enough money".</p>
+<ul>
+<li>It is <b>too</b> cold <u>to swim</u>.</li>
+<li>She is old <b>enough</b> <u>to vote</u>.</li>
+<li>We don't have <b>enough</b> time <u>to finish</u>.</li>
+</ul>
+</div><div class="card" data-title="10. Passive and perfect forms">
+<h2>10. Passive and perfect forms</h2>
+<p class="rule"><strong>Gerund:</strong> <em>being + p.p.</em> (passive), <em>having + p.p.</em> (perfect).<br/><strong>Infinitive:</strong> <em>to be + p.p.</em> (passive), <em>to have + p.p.</em> (perfect).</p><p class="trap"><strong>Trap:</strong> Use the passive when the subject receives the action; use the perfect when the action happened earlier.</p>
+<ul>
+<li>She hates <u>being interrupted</u>.</li>
+<li>He admitted <u>having lied</u>.</li>
+<li>The report is <u>to be finished</u> today. / He seems <u>to have left</u>.</li>
+</ul>
+</div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul><li>Verb is on the gerund list? Use -ing.</li><li>Verb is on the infinitive list? Use to + verb.</li><li>Preposition before the verb? Always -ing.</li><li>make/let? Bare infinitive. suggest/recommend? Gerund.</li><li>remember, stop, try? Check which meaning you intend.</li></ul></div><div class="footnote">Based on the Verb Patterns M1 worksheet. Section 5 goes beyond the worksheet.</div></section><section class="topic" id="s1" data-topic="s1"><h1>Conditionals and Inversion: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> part is the if-clause (or its inverted form) and the <b>blue bold</b> part is the result.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule">A conditional sentence has an <em>if clause</em> (the condition) and a <em>main clause</em> (the result). The clause order does not change the meaning.</p><p class="note">Use a comma only when the if clause comes first.</p><p class="trap"><strong>Trap:</strong> The tense in the if clause shows how real or likely the situation is, not when it happens.</p><ul><li><u>If you study hard</u>, you <b>will pass</b> your exams.</li><li>You <b>will pass</b> your exams <u>if you study hard</u>.</li></ul></div><div class="card" data-title="1. Zero conditional (real, general truths)">
+<h2>1. Zero conditional (real, general truths)</h2>
+<p class="form">If + present simple, present simple</p><p class="rule">Use it for facts and repeated results: something always happens when a condition is met.</p><p class="trap"><strong>Trap:</strong> Don't use <em>will</em> in either clause. "If" can usually be replaced by "when".</p>
+<ul>
+<li><u>If you add two and two</u>, you <b>get</b> four.</li>
+<li><u>If he takes vitamins every day</u>, he <b>doesn't get</b> sick.</li>
+<li>He <b>doesn't get</b> sick <u>if he takes vitamins every day</u>.</li>
+</ul>
+</div><div class="card" data-title="2. First conditional (likely future)">
+<h2>2. First conditional (likely future)</h2>
+<p class="form">If + present simple, will + infinitive</p><p class="rule">Use it for a possible or likely outcome in the present or future.</p><p class="trap"><strong>Trap:</strong> Never put <em>will</em> in the if clause. "As soon as" and "when" also use the present: "I'll have a shower as soon as I get home."</p>
+<ul>
+<li><u>If it rains later</u>, we <b>'ll stay</b> at home.</li>
+<li><u>If she studies for the test</u>, she <b>will get</b> a good grade.</li>
+<li>We <b>'ll be</b> late <u>if we don't hurry up</u>.</li>
+</ul>
+</div><div class="card" data-title="3. Second conditional (unreal or unlikely present/future)">
+<h2>3. Second conditional (unreal or unlikely present/future)</h2>
+<p class="form">If + past simple, would + infinitive</p><p class="rule">Use it for impossible or unlikely situations and their imagined results.</p><p class="trap"><strong>Trap:</strong> The past tense here is not about past time. Use <em>were</em> for all persons in formal English ("If I were you…"). Don't put <em>would</em> in the if clause.</p>
+<ul>
+<li><u>If I won the lottery</u>, I <b>would sail</b> round the world.</li>
+<li><u>If I were you</u>, I <b>would get</b> a new job.</li>
+<li><u>If I had wings</u>, I <b>would fly</b> to Antarctica.</li>
+</ul>
+</div><div class="card" data-title="4. Third conditional (unreal past)">
+<h2>4. Third conditional (unreal past)</h2>
+<p class="form">If + past perfect, would have + past participle</p><p class="rule">Use it for past regrets or different outcomes: things that did not happen and their imagined results.</p><p class="trap"><strong>Trap:</strong> Don't use <em>would have</em> in the if clause. It is about the past, so "had" is needed.</p>
+<ul>
+<li><u>If I had studied harder</u>, I <b>would have passed</b> the exam.</li>
+<li><u>If you hadn't been late</u>, we <b>would not have missed</b> the bus.</li>
+<li><u>If we had arrived earlier</u>, we <b>would have seen</b> John.</li>
+</ul>
+</div><div class="card" data-title="5. Mixed conditionals">
+<h2>5. Mixed conditionals</h2>
+<p class="form">Past cause, present result / Present state, past result</p><p class="rule">Mix two time frames.</p><p class="rule"><strong>Past condition, present result:</strong> if + past perfect, would + infinitive.<br/><strong>Present condition, past result:</strong> if + past simple, would have + past participle.</p><p class="trap"><strong>Trap:</strong> Look at the time of each clause separately. Each clause follows its own time, not the usual pattern.</p>
+<ul>
+<li><u>If I had listened to my mother</u>, I <b>would be</b> happier now.</li>
+<li><u>If I were a better driver</u>, I <b>wouldn't have had</b> that accident.</li>
+</ul>
+</div><div class="card" data-title="6. What 'inversion' means">
+<h2>6. What 'inversion' means</h2>
+<p class="form">Subject + auxiliary → Auxiliary + subject</p><p class="rule">To invert is to put the auxiliary or modal before the subject. If there is no auxiliary, use <em>do/does/did</em>.</p><p class="note">Inversion adds emphasis or formality.</p><p class="trap"><strong>Trap:</strong> Don't invert a plain verb: "Won I" is wrong. Use should, were or had in conditionals.</p>
+<ul>
+<li>She will visit her aunt. → <u>Will</u> she visit her aunt?</li>
+<li>She visited her aunt. → <u>Did</u> she visit her aunt?</li>
+<li>She was tired. → <u>Was</u> she tired?</li>
+</ul>
+</div><div class="card big" data-title="7. Inversion: should, were, had">
+<h2>7. Inversion: should, were, had</h2>
+<p class="rule"><strong>First (should)</strong></p><p class="form">If + subject + verb → Should + subject + base verb</p><p class="rule">Drop <em>if</em>, put <em>should</em> before the subject, and use the base verb. It sounds formal and a little less likely, and is common in polite requests and notices.</p><p class="trap"><strong>Trap:</strong> Use <em>should</em> only for the first conditional. Don't add "to" after it.</p><p class="rule"><strong>Second (were)</strong></p><p class="form">If + past → Were + subject + to + infinitive</p><p class="rule">Drop <em>if</em>, start with <em>were</em>, and use <em>to + infinitive</em>. With the verb <em>be</em>, just move <em>were</em> before the subject.</p><p class="trap"><strong>Trap:</strong> You can't invert the simple past directly. Not "Won I the lottery…", but "Were I to win…". With "be", "to" is not needed.</p><p class="rule"><strong>Third (had)</strong></p><p class="form">If + had + p.p. → Had + subject + p.p.</p><p class="rule">Drop <em>if</em> and move <em>had</em> before the subject. Everything else stays the same.</p><p class="trap"><strong>Trap:</strong> Keep the past participle. Don't add <em>have</em> or a second "had".</p>
+<ul>
+<li><u>Should a customer wish</u> to cancel, they <b>should notify</b> us within seven days.</li>
+<li><u>Should you need</u> any assistance, please contact me.</li>
+<li><u>Were the Sun to disappear</u>, Earth <b>would</b> no longer <b>support</b> life.</li>
+<li><u>Were California a country</u>, it <b>would be</b> one of the world's largest economies.</li>
+<li><u>Were I to get</u> married, I <b>would work</b> hard.</li>
+<li><u>Had we lost</u> that match, it <b>would've been</b> a disaster.</li>
+<li>We <b>would have fixed</b> that problem by now <u>had we known</u> earlier.</li>
+<li><u>Had I realized</u> the consequences, I <b>would never have taken</b> that decision.</li>
+</ul>
+</div><div class="card" data-title="8. Negative inversion">
+<h2>8. Negative inversion</h2>
+<p class="form">Should/Were/Had + subject + not …</p><p class="rule">Put <em>not</em> after the subject, never contract it before the subject.</p><p class="trap"><strong>Trap:</strong> Don't write "Hadn't I been busy…" in formal writing.</p>
+<ul>
+<li><u>Should you not consent</u>, you <b>may inform</b> our company at any time.</li>
+<li><u>Were I not</u> good at math, I <b>'d find</b> this homework challenging.</li>
+<li><u>Had I not been</u> busy, I <b>would have attended</b> the meeting.</li>
+</ul>
+</div><div class="card" data-title="9. Alternatives to 'if'">
+<h2>9. Alternatives to 'if'</h2>
+<p class="rule">Other words can introduce a condition: <em>unless</em> (= if not), <em>provided/providing (that), as long as, on condition that, supposing, only if</em>. <em>Otherwise</em> (= if not) links two sentences.</p><p class="trap"><strong>Trap:</strong> Don't use <em>unless</em> with a negative verb. <em>In case</em> means "because it may happen", not "if".</p>
+<ul>
+<li>You will pass <u>provided that</u> you study.</li>
+<li><u>Unless</u> you hurry, you will miss the bus.</li>
+<li>Hurry up; <u>otherwise</u>, we will miss the bus.</li>
+</ul>
+</div><div class="card" data-title="10. If + am/is/are to, and were to">
+<h2>10. If + am/is/are to, and were to</h2>
+<p class="form">If + am/is/are to + verb, will/must/should + verb</p><p class="rule"><em>If + be to</em> expresses a necessary or intended future (formal). <em>If + were to</em> expresses an unlikely or imagined future.</p><p class="trap"><strong>Trap:</strong> This is not the same as the plain present: "If I am to get married" means "if I intend to" or "if it is planned".</p>
+<ul>
+<li><u>If I am to get married</u>, I will work hard.</li>
+<li><u>If we are to finish on time</u>, we must start now.</li>
+<li><u>If the Sun were to disappear</u>, Earth would no longer support life.</li>
+</ul>
+</div><div class="card core" data-title="Quick comparison"><h2>Quick comparison</h2><div class="wrap"><table>
+<tr><th>Type</th><th>If form</th><th>Inverted</th></tr>
+<tr><td>First</td><td>If + present</td><td>Should + subject + base verb</td></tr>
+<tr><td>Second</td><td>If + past</td><td>Were + subject (+ to + verb)</td></tr>
+<tr><td>Third</td><td>If + had + p.p.</td><td>Had + subject + p.p.</td></tr>
+</table></div><p class="note">Zero conditionals are not normally inverted. Based on the Conditionals and Inversion handout, the practice worksheet, and the conditionals infographic.</p></div></section><section class="topic" id="s2" data-topic="s2"><h1>Conjunctive Adverbs and Conjunctions: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> part is the connector and the <b>blue bold</b> part is what it introduces or links.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule"><strong>Conjunctive adverbs</strong> (however, therefore, moreover) show how one idea relates to the previous one. They do not join clauses on their own.</p><p class="rule"><strong>Conjunctions</strong> do join clauses:<br/>Coordinating: and, but, so<br/>Subordinating: although, because, while<br/>Correlative: not only…but also</p><p class="trap"><strong>Trap:</strong> Ask: does this word join two clauses by itself? If yes, it is a conjunction. If it needs a period or semicolon, it is a conjunctive adverb.</p><ul><li>Lisa and Alan were on time. <u>However</u>, <b>John arrived late</b>.</li><li><u>Although</u> <b>John arrived late</b>, the meeting started on time.</li></ul></div><div class="card big" data-title="1. Punctuating and placing conjunctive adverbs">
+<h2>1. Punctuating and placing conjunctive adverbs</h2>
+<p class="rule"><strong>Punctuation (avoid the comma splice)</strong></p><p class="form">Sentence. Adverb, sentence. / Sentence; adverb, sentence.</p><p class="rule">A conjunctive adverb needs a period or semicolon before it. It is followed by a comma when it starts the sentence.</p><p class="trap"><strong>Trap:</strong> Joining two sentences with only a comma before the adverb is a <em>comma splice</em> (wrong): "There was a scandal, therefore, the president resigned."</p><p class="rule"><strong>Placement</strong></p><p class="rule">They can open the sentence (most common), sit between subject and verb, or close the sentence. Set them off with commas.</p><p class="trap"><strong>Trap:</strong> Even in the middle or at the end, they do not join clauses. You still need a period or semicolon before the sentence.</p>
+<ul>
+<li>There was a scandal. <u>Therefore</u>, <b>the company's president resigned</b>.</li>
+<li>There was a scandal; <u>therefore</u>, <b>the company's president resigned</b>.</li>
+<li>The employees were tired. <u>As a result</u>, <b>an accident occurred</b>.</li>
+<li><u>For example</u>, <b>people like walking with their dogs</b>.</li>
+<li>People, <u>for example</u>, <b>like walking with their dogs</b>.</li>
+<li>Many customers were upset, <u>nonetheless</u>.</li>
+</ul>
+</div><div class="card big" data-title="2. Functions of conjunctive adverbs">
+<h2>2. Functions of conjunctive adverbs</h2>
+<p class="rule">Choose the adverb by the relationship you want to show.</p><p class="trap"><strong>Trap:</strong> Don't use <em>however</em> to add information or <em>moreover</em> to show contrast. The word must match the meaning.</p><p class="rule"><strong>"On the contrary" vs "on the other hand"</strong></p><p class="rule"><em>On the contrary</em> rejects the previous statement entirely. <em>On the other hand</em> adds a different side of the same issue.</p><p class="trap"><strong>Trap:</strong> Both show contrast, but you can't swap them.</p>
+<ul>
+<li><strong>Addition:</strong> Bananas are healthy. <u>In addition</u>, <b>they are easy to eat</b>. (also: moreover, furthermore, besides)</li>
+<li><strong>Contrast:</strong> The owner was rich. <u>However</u>, <b>most employees were poor</b>. (also: nevertheless, nonetheless, in contrast, on the other hand)</li>
+<li><strong>Example:</strong> Many sports are played in winter. <u>For example</u>, <b>people enjoy cross-country skiing</b>. (also: for instance, in particular, specifically)</li>
+<li><strong>Result:</strong> University is costly. <u>Therefore</u>, <b>many people cannot afford it</b>. (also: thus, hence, consequently, as a result)</li>
+<li><strong>Order and time:</strong> They sat down. <u>Next</u>, <b>they were given a form</b>. (also: first, then, meanwhile, finally)</li>
+<li><strong>Conclusion:</strong> <u>In conclusion</u>, <b>smoking should be banned</b>. (also: in summary, to sum up, overall)</li>
+<li>Black bears don't usually attack humans. <u>On the contrary</u>, <b>they normally run away</b>.</li>
+<li>The book seems to be about success. <u>On the contrary</u>, <b>it teaches lessons about failure</b>.</li>
+<li>The job pays well. <u>On the other hand</u>, <b>the hours are long</b>.</li>
+</ul>
+</div><div class="card" data-title="3. Coordinating conjunctions (FANBOYS)">
+<h2>3. Coordinating conjunctions (FANBOYS)</h2>
+<p class="rule">For, and, nor, but, or, yet, so. They join two independent clauses with a comma before the conjunction.</p><p class="trap"><strong>Trap:</strong> Don't join two clauses with a comma alone. "So" and "for" always need a comma before them.</p>
+<ul>
+<li>He was tired of commuting, <u>so</u> <b>he was excited about the job offer</b>.</li>
+<li>Practice diving, <u>for</u> <b>staying under too long can cause illness</b>.</li>
+<li>The residents were warned, <u>yet</u> <b>several people were injured</b>.</li>
+</ul>
+</div><div class="card" data-title="4. Subordinating conjunctions (adverb clauses)">
+<h2>4. Subordinating conjunctions (adverb clauses)</h2>
+<p class="rule">They begin a dependent clause that shows time, contrast, reason, purpose, condition, or concession. The clause cannot stand alone.</p><p class="trap"><strong>Trap:</strong> Put a comma after the clause when it comes first, but usually not when it comes last.</p>
+<ul>
+<li><strong>Contrast:</strong> Western Scotland is wild, <u>whereas</u> <b>eastern Scotland is lush farmland</b>. (also: while, although, even though, much as)</li>
+<li><strong>Time:</strong> Traffic gets lighter <u>once</u> <b>the schools close</b>. (also: as soon as, until, by the time, since)</li>
+<li><strong>Condition:</strong> The boys can go fishing <u>as long as</u> <b>they come back before dark</b>.</li>
+<li><strong>Purpose or precaution:</strong> Take a blanket <u>in case</u> <b>it gets cooler</b>. / <u>In order to</u> <b>relieve the burden</b>, they will build a second airport.</li>
+</ul>
+</div><div class="card" data-title="5. Clause vs. phrase: although / despite, because / due to">
+<h2>5. Clause vs. phrase: although / despite, because / due to</h2>
+<p class="form">Although + S + V / Despite + noun or -ing</p><p class="rule"><strong>Followed by a clause (S + V):</strong> <em>although, even though, because</em>.<br/><strong>Followed by a noun phrase or gerund:</strong> <em>despite, in spite of, due to, owing to, thanks to, because of</em>.</p><p class="trap"><strong>Trap:</strong> Don't use <em>despite</em> or <em>due to</em> before a full clause. "Despite it was windy" is wrong; "Despite the wind" is right.</p>
+<ul>
+<li><u>Even though</u> <b>it was extremely windy</b>, we played volleyball.</li>
+<li><u>Despite</u> <b>the wind</b>, we played volleyball.</li>
+<li><u>Due to</u> <b>the renovation of their stadium</b>, the team will use another ground.</li>
+</ul>
+</div><div class="card" data-title="6. Correlative conjunctions">
+<h2>6. Correlative conjunctions</h2>
+<p class="form">both…and / either…or / neither…nor / whether…or / not only…but also</p><p class="rule">They come in pairs and must link parallel structures (same part of speech or form).</p><p class="trap"><strong>Trap:</strong> Keep both parts parallel. Don't mix them, such as "both X or Y". The verb agrees with the nearer subject (see the subject-verb agreement sheet).</p>
+<ul>
+<li>Students must study <u>either</u> <b>French</b> <u>or</u> <b>Spanish</b>.</li>
+<li>The plan is <u>neither</u> <b>costly</b> <u>nor</u> <b>painful</b>.</li>
+<li>The society helps students <u>not only</u> <b>settle in</b> <u>but also</u> <b>organises trips</b>.</li>
+</ul>
+</div><div class="card" data-title="7. Inversion with negative correlatives">
+<h2>7. Inversion with negative correlatives</h2>
+<p class="form">Hardly + had + S + p.p. + when / No sooner + had + S + p.p. + than</p><p class="rule">After <em>not only, hardly, scarcely, no sooner</em> at the start of a sentence, the auxiliary comes before the subject. Pair them with <em>but also / when / than</em>.</p><p class="trap"><strong>Trap:</strong> <em>Hardly/scarcely</em> go with <em>when</em>, and <em>no sooner</em> goes with <em>than</em>. Don't swap them.</p>
+<ul>
+<li><u>Hardly had</u> she placed the cakes on the table <b>when</b> the children asked for more.</li>
+<li><u>No sooner had</u> we arrived <b>than</b> it began to rain.</li>
+<li><u>Not only does</u> the society help students settle in, <b>but</b> it also organises trips.</li>
+</ul>
+</div><div class="card" data-title='8. "No matter" and the -ever words'>
+<h2>8. "No matter" and the -ever words</h2>
+<p class="form">No matter how + adj/adv + S + V / However + adj + S + V</p><p class="rule"><em>No matter how/what/who</em> and <em>however, whatever, whoever, whichever, whenever, wherever</em> mean "it does not matter". Use <em>however</em> or <em>no matter how</em> with an adjective or adverb.</p><p class="trap"><strong>Trap:</strong> <em>However</em> alone (with no adjective) is a conjunctive adverb for contrast. <em>Whichever</em> goes with a noun ("whichever channel").</p>
+<ul>
+<li><u>No matter how</u> <b>hard the authorities try</b>, crime stays high.</li>
+<li><u>Whichever</u> <b>channel</b> you watch, the news is the same.</li>
+<li><u>No matter how many windows</u> I open, there is no air movement.</li>
+</ul>
+</div><div class="card" data-title="9. Purpose, otherwise, instead, besides, whether…or not">
+<h2>9. Purpose, otherwise, instead, besides, whether…or not</h2>
+<p class="rule"><em>So that / in order that</em> introduce purpose (usually with can/could/will/would).<br/><em>Otherwise</em> (= if not), <em>instead</em> (in place of that), and <em>besides</em> (in addition) are conjunctive adverbs.<br/><em>Whether…or not</em> introduces alternatives.</p><p class="trap"><strong>Trap:</strong> <em>Besides</em> means "also"; <em>beside</em> means "next to". <em>So that</em> (purpose) is different from <em>so…that</em> (result).</p>
+<ul>
+<li>He studies <u>so that</u> <b>he can improve his English</b>.</li>
+<li>He didn't call. <u>Instead</u>, <b>he sent an email</b>.</li>
+<li>Go now; <u>otherwise</u>, <b>you will be late</b>.</li>
+</ul>
+</div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul>
+<li>Two full sentences? Use a period or semicolon plus a conjunctive adverb, or a conjunction.</li>
+<li>Clause after the connector? Use although, because, while. Noun or -ing? Use despite, due to, because of.</li>
+<li>Pairs like both…and or hardly…when? Keep both parts parallel and use the correct partner.</li>
+<li>Is the relationship addition, contrast, example, result, time, or conclusion? Choose the adverb that matches.</li></ul>
+<p class="note">Based on the Conjunctive Adverbs handout and the Conjunctions and Adverbial Clauses practice test.</p></div></section><section class="topic" id="s3" data-topic="s3"><h1>Adverb Clauses: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> part is the connector and the <b>blue bold</b> part is the clause it introduces. Examples marked <span class="note">(added)</span> come from the worksheet, not the slides.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="form">Subordinating conjunction + subject + verb</p><p class="rule">An <strong>adverb clause</strong> is a dependent clause that acts as an adverb. It tells <em>when, where, why, how</em> or <em>under what condition</em> something happens, and modifies a verb, adjective, or another adverb.</p><p class="trap"><strong>Trap:</strong> It cannot stand alone. Related connectors are on the Conjunctions sheet.</p><ul><li>I stayed home <u>because</u> <b>it was raining</b>. (why)</li><li><u>If</u> <b>you study</b>, you will pass the test. (condition)</li></ul></div><div class="card" data-title="1. Position and punctuation"><h2>1. Position and punctuation</h2><p class="rule">The clause can come before or after the independent clause.</p><p class="rule"><strong>Before:</strong> put a comma after it. <strong>After:</strong> no comma. Exception: always use a comma with <em>while</em> and <em>whereas</em>. Many writers also always use one with <em>although, though, even though</em>.</p><p class="trap"><strong>Trap:</strong> Avoid double connectors: not <em>because…so</em>, not <em>although…but</em>.</p><ul><li><u>Because</u> <b>he was sick</b>, he stayed home.</li><li>He finished his work <u>even though</u> <b>he was tired</b>.</li></ul></div><div class="card" data-title="2. Time and place"><h2>2. Time and place</h2><p class="rule"><strong>Time:</strong> <em>when</em> (a specific time), <em>whenever</em> (any time), <em>while</em> (at the same time), <em>as soon as</em>, <em>after</em> (later), <em>before</em> (earlier), <em>since</em> (from that time), <em>as</em> (at the same time), <em>until</em> (up to the time).<br/><strong>Place:</strong> <em>where, wherever, everywhere, anywhere</em>.</p><p class="trap"><strong>Trap:</strong> Don't use a future tense in a time clause: "I will call you when I arrive", not "when I will arrive".</p><ul><li>I will call you <u>when</u> <b>I get home</b>.</li><li>Call me <u>before</u> <b>you leave</b>.</li><li>I'll get coffee <u>while</u> <b>you two talk</b>.</li><li>Most people shop <u>where</u> <b>they get the lowest prices</b>.</li><li><u>Anywhere</u> <b>you go</b>, you hear people talking on their cell phones.</li></ul></div><div class="card" data-title="3. Frequency and manner"><h2>3. Frequency and manner</h2><p class="rule"><strong>Frequency</strong> (how often?): <em>as + adverb + as</em>; it follows the independent clause.<br/><strong>Manner</strong> (how?): <em>as, as if, as though</em>. Most manner clauses follow the independent clause.</p><p class="trap"><strong>Trap:</strong> Use <em>as if / as though</em> + past tense for unreal situations: "as if he were the manager", not "like he is".</p><ul><li>I do not visit my parents <u>as often as</u> <b>they would like me to</b>.</li><li>He speaks <u>as though</u> <b>he were the boss</b>.</li><li>Do it <u>as</u> <b>I told you</b>.</li></ul></div><div class="card" data-title="4. Reason, result, and purpose"><h2>4. Reason, result, and purpose</h2><p class="rule"><strong>Reason:</strong> <em>because, since, as</em> (before or after the main clause).<br/><strong>Result:</strong> <em>so + adjective/adverb + that</em>; <em>such a(n) + noun + that</em>. A result clause follows the independent clause.</p><ul><li>Europeans are better environmentalists <u>because</u> <b>they are more used to conserving energy</b>.</li><li>Joanna's cookie business is <u>so</u> successful <u>that</u> <b>she hired three new employees</b>.</li><li>Joanna's cookies are <u>such a</u> success <u>that</u> <b>she is considering franchising</b>.</li><li>He studies every day <u>so that</u> <b>he can improve his English</b>. <span class="note">(added)</span></li></ul></div><div class="card" data-title="5. Contrast and concession"><h2>5. Contrast and concession</h2><p class="rule"><strong>Direct opposition:</strong> <em>whereas, while</em>.<br/><strong>Concession (unexpected result):</strong> <em>although, even though, though</em>. It means "this is true, but the main clause is more important".</p><p class="trap"><strong>Trap:</strong> Don't pair <em>although</em> with <em>but</em>. One connector is enough.</p><ul><li>San Francisco is cool during the summer, <u>whereas</u> <b>Los Angeles is generally hot</b>.</li><li><u>Although</u> <b>I had studied all night</b>, I failed the test.</li><li><u>Though</u> <b>the citizens had despised the old regime</b>, they disliked the new government even more.</li></ul></div><div class="card" data-title="6. Condition: if and unless"><h2>6. Condition: if and unless</h2><p class="rule"><em>If</em> = the condition must happen. <em>Unless</em> = the condition must not happen.</p><div class="wrap"><table><tr><th>Pattern</th><th>If clause</th><th>Main clause</th></tr><tr><td>Present, true</td><td>present</td><td>present</td></tr><tr><td>Future, true</td><td>present</td><td>future (will)</td></tr><tr><td>Present/future, untrue</td><td>simple past</td><td>would + base</td></tr><tr><td>Past, untrue</td><td>past perfect</td><td>would have + p.p.</td></tr></table></div><p class="trap"><strong>Trap:</strong> Use the present in the if clause even for the future: "I'll go if it doesn't rain".</p><ul><li><u>If</u> <b>you study</b>, you will get good grades.</li><li><u>Unless</u> <b>you study</b>, you will not get good grades.</li><li>The mayor would have lost <u>if</u> <b>the labor unions had not supported him</b>.</li></ul></div><div class="card" data-title="7. Common mistakes"><h2>7. Common mistakes</h2><div class="wrap"><table><tr><th>Wrong</th><th>Right</th><th>Why</th></tr><tr><td>I will call you when I will arrive.</td><td>…when I arrive.</td><td>No future tense in a time clause.</td></tr><tr><td>Because he was sick, so he stayed home.</td><td>Because he was sick, he stayed home.</td><td>Not because and so together.</td></tr><tr><td>Although it was raining but we played.</td><td>Although it was raining, we played.</td><td>Not although and but together.</td></tr><tr><td>I'll go if it will not rain.</td><td>…if it doesn't rain.</td><td>Present tense, even for the future.</td></tr><tr><td>He speaks like he is the manager.</td><td>He speaks as if he were the manager.</td><td>as if + past for unreal.</td></tr><tr><td>Because I was tired. I went home.</td><td>Because I was tired, I went home.</td><td>A clause alone is a fragment.</td></tr></table></div><p class="note">The last row is from the worksheet's error-correction part.</p></div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul><li>Is it a dependent clause starting with a subordinating conjunction?</li><li>Does it answer when, where, why, how, or under what condition?</li><li>Comma if it comes first; usually none if it comes last.</li><li>One connector only: no because…so, no although…but.</li></ul><p class="note">Based on the Adverb Clauses 2026 slides and the ADV Clause worksheet. The worksheet's exercises were not copied.</p></div></section><section class="topic" id="s4" data-topic="s4"><h1>Adjective Clauses: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> word is the relative pronoun or adverb and the <b>blue bold</b> part is the rest of the clause.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule">An <strong>adjective clause</strong> is a dependent clause that works as an adjective. It modifies a noun or pronoun (the <em>antecedent</em>) and begins with a relative pronoun or relative adverb.</p><p class="trap"><strong>Trap:</strong> It gives more information about a noun; it cannot stand alone.</p><ul><li>The man <u>who</u> <b>lives next door</b> is a doctor.</li><li>I have a friend <u>who</u> <b>lives in Canada</b>.</li><li>This is the place <u>where</u> <b>we first met</b>.</li></ul></div><div class="card" data-title="1. Relative pronouns and adverbs"><h2>1. Relative pronouns and adverbs</h2><div class="wrap"><table><tr><th>Type</th><th>Words</th></tr><tr><td>Relative pronouns</td><td>who, whom, whose, that, which</td></tr><tr><td>Relative adverbs</td><td>when, where (also why)</td></tr></table></div><p class="trap"><strong>Trap:</strong> Choose by function: <em>whose</em> shows ownership; <em>when, where, why</em> describe time, place, reason.</p><ul><li>The book <u>that</u> <b>you lent me</b> was interesting.</li><li>The student <u>whose</u> <b>phone was stolen</b> is crying.</li><li>I'll never forget the day <u>when</u> <b>I met you</b>.</li></ul></div><div class="card" data-title="2. Position and verb agreement"><h2>2. Position and verb agreement</h2><p class="rule">Put the clause right after its antecedent. The verb in the clause agrees in number with the antecedent.</p><p class="rule">When a clause modifies a whole sentence, it comes at the end, always uses <em>which</em>, and is always nonrestrictive.</p><p class="trap"><strong>Trap:</strong> A misplaced clause changes the meaning: "in his friend's car that he had just bought" suggests the car was just bought.</p><ul><li>He left the gift <u>that</u> <b>he had just bought</b> in his friend's car.</li><li>An employee <u>who</u> <b>works</b> part-time usually receives no benefits.</li><li>Employees <u>who</u> <b>work</b> part-time usually receive no benefits.</li><li>The team won the championship, <u>which</u> <b>shocked the opponents</b>.</li></ul></div><div class="card" data-title="3. Restrictive vs nonrestrictive"><h2>3. Restrictive vs nonrestrictive</h2><div class="wrap"><table><tr><th></th><th>Restrictive</th><th>Nonrestrictive</th></tr><tr><td>Information</td><td>essential</td><td>extra, not essential</td></tr><tr><td>Commas</td><td>never</td><td>always, before and after</td></tr><tr><td>Pronoun</td><td>that (also who, etc.)</td><td>which (also who, etc.)</td></tr></table></div><p class="trap"><strong>Trap:</strong> Commas change meaning: they mark information the sentence could do without.</p><ul><li>The book <u>that</u> <b>I borrowed from the library</b> is due tomorrow.</li><li>Students <u>who</u> <b>study hard</b> usually perform well in exams.</li><li>My brother, <u>who</u> <b>lives in Cambodia</b>, is visiting next week.</li></ul></div><div class="card" data-title="4. Kinds of adjective clauses"><h2>4. Kinds of adjective clauses</h2><div class="wrap"><table><tr><th>Kind</th><th>Words</th><th>Example</th></tr><tr><td>Subject</td><td>who, which, that</td><td>The boy who runs fast is my friend.</td></tr><tr><td>Object</td><td>whom, which, that</td><td>The movie that we watched was funny.</td></tr><tr><td>Possessive</td><td>whose</td><td>The girl whose bag was stolen is sad.</td></tr><tr><td>Object of preposition</td><td>to whom, for which</td><td>The person to whom I spoke was helpful.</td></tr><tr><td>Quantity</td><td>some of whom, all of which</td><td>She has five dogs, all of which are cute.</td></tr><tr><td>Time/place/reason</td><td>when, where, why</td><td>The house where I grew up is old.</td></tr></table></div></div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul><li>Find the antecedent: is the clause right after it?</li><li>Does the verb agree with the antecedent?</li><li>Essential information: no commas. Extra information: commas.</li><li>Modifying a whole sentence? Use which, at the end.</li></ul><p class="note">Based on the Adjective Clause 2026 slides. The pre/post test, homework and englishtestsonline test were not used for rules.</p></div></section><section class="topic" id="s5" data-topic="s5"><h1>Noun Clauses: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> word is the signal word and the <b>blue bold</b> part is the noun clause.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule">A <strong>noun clause</strong> is a dependent clause that functions as a noun. It cannot stand alone and is part of an independent clause. It can be a subject, an object, or a complement.</p><p class="trap"><strong>Trap:</strong> The clause keeps statement word order, not question order.</p><ul><li><u>What</u> <b>she said</b> surprised everyone. (subject)</li><li>I don't know <u>that</u> <b>he is honest</b>. (object)</li><li>The truth is <u>that</u> <b>we are late</b>. (complement)</li></ul></div><div class="card" data-title="1. Signal words"><h2>1. Signal words</h2><p class="rule"><strong>Conjunctions:</strong> that, whether, if.<br/><strong>Wh-words:</strong> what, where, when, why, how, who, whom, whose.</p><ul><li>I wonder <u>where</u> <b>she is</b>.</li><li><u>That</u> <b>he was late</b> surprised us all.</li><li>She didn't know <u>what</u> <b>to do</b>.</li></ul></div><div class="card" data-title="2. Functions"><h2>2. Functions</h2><p class="rule"><strong>Subject:</strong> what you said is true; <em>whether she agrees</em> doesn't matter; how the accident happened remains unclear.<br/><strong>Object of a verb or preposition.</strong><br/><strong>Subject complement:</strong> after a linking verb (be, seem, appear, look).</p><ul><li><u>That</u> <b>she won the contest</b> surprised everyone. (subject)</li><li>She asked <u>whether</u> <b>we were ready</b>. (object of verb)</li><li>Pay attention to <u>what</u> <b>I'm saying</b>. (object of preposition)</li><li>The problem is <u>that</u> <b>we don't have enough time</b>. (complement)</li><li>The problem was <u>who</u> <b>would pay for it</b>. (complement)</li></ul></div><div class="card" data-title="3. Quick patterns"><h2>3. Quick patterns</h2><div class="wrap"><table><tr><th>Function</th><th>Example</th><th>Connectors</th></tr><tr><td>Subject</td><td>What you did was wrong.</td><td>what, that, how, why</td></tr><tr><td>Object (verb)</td><td>She believes that he is honest.</td><td>that, if, whether</td></tr><tr><td>Object (preposition)</td><td>I'm thinking about what you said.</td><td>about + what, of + how</td></tr><tr><td>Complement</td><td>The question is who will go.</td><td>who, which, how</td></tr></table></div></div><div class="card" data-title="4. Common mistakes"><h2>4. Common mistakes</h2><div class="wrap"><table><tr><th>Wrong</th><th>Right</th><th>Why</th></tr><tr><td>I don't know what is he doing.</td><td>…what he is doing.</td><td>No inversion in noun clauses.</td></tr><tr><td>She said me that she was tired.</td><td>She said to me that…</td><td>Use to + person after say.</td></tr><tr><td>I wonder that he is coming.</td><td>I wonder if/whether he is coming.</td><td>if/whether for yes/no.</td></tr><tr><td>The fact which he is late annoys me.</td><td>The fact that he is late…</td><td>that, not which.</td></tr><tr><td>I don't know where is she.</td><td>…where she is.</td><td>No question order.</td></tr></table></div></div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul><li>Does the clause act as a noun (subject, object, complement)?</li><li>Statement order inside the clause: no inversion.</li><li>Yes/no content: if or whether. Not: that.</li><li>After say with a listener: say to me.</li></ul><p class="note">Based on the Noun Clauses 2026 slides. The slides' exercises and the other worksheets were not copied.</p></div></section><section class="topic" id="s6" data-topic="s6"><h1>Participial Phrases: Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples.</p><p class="key">In examples, the <u>underlined</u> part is the participial phrase and the <b>blue bold</b> word is the noun it describes. Examples marked <span class="note">(added)</span> are mine.</p><div class="card core" data-title="Core definition"><h2>Core definition</h2><p class="rule">A <strong>participial phrase</strong> is a participle plus its modifiers, objects, or complements. It acts as an adjective and describes a noun or pronoun, making the sentence shorter and smoother.</p><p class="trap"><strong>Trap:</strong> Place it near the noun it modifies.</p><ul><li>The <b>girl</b> <u>standing near the door</u> is my cousin.</li><li>The <b>man</b> <u>sitting near the window</u> is my uncle.</li></ul></div><div class="card" data-title="1. Types"><h2>1. Types</h2><div class="wrap"><table><tr><th>Type</th><th>Form</th><th>Meaning</th></tr><tr><td>Present</td><td>-ing</td><td>ongoing or simultaneous action</td></tr><tr><td>Past</td><td>-ed / -en</td><td>completed action or passive state</td></tr><tr><td>Perfect</td><td>having + past participle</td><td>action completed before the main verb</td></tr></table></div><ul><li><u>Running through the park</u>, the <b>athlete</b> felt energized.</li><li><u>Exhausted from the long day</u>, <b>she</b> fell asleep quickly.</li><li><u>Having finished her homework</u>, <b>Maria</b> went out to play.</li></ul></div><div class="card" data-title="2. Position and punctuation"><h2>2. Position and punctuation</h2><p class="rule"><strong>Beginning:</strong> sets the scene; comma after.<br/><strong>Middle:</strong> adds detail; commas around it if nonrestrictive.<br/><strong>End:</strong> extra information.</p><p class="trap"><strong>Trap:</strong> Commas mark non-essential information. Essential phrases take none: "The girl standing near the door…".</p><ul><li><u>Smiling brightly</u>, the <b>child</b> opened the gift.</li><li>The <b>book</b>, <u>written in 1925</u>, is a classic.</li><li>He left the room, <u>slamming the door behind him</u>.</li></ul></div><div class="card" data-title="3. Choosing the right form"><h2>3. Choosing the right form</h2><p class="rule">Active meaning takes the <em>-ing</em> form; passive meaning takes the past participle.</p><p class="trap"><strong>Trap:</strong> Don't use the base verb or simple past: not "the woman wear", "the book wrote", "the house build".</p><ul><li>The <b>students</b> <u>playing in the playground</u> are excited.</li><li>The <b>book</b> <u>written by George Orwell</u> is famous.</li><li>The <b>house</b> <u>built in 2010</u> is modern.</li></ul></div><div class="card" data-title="4. Dangling participles(added)"><h2>4. Dangling participles <span class="note">(added)</span></h2><p class="rule">The phrase must describe the noun right next to it. If that noun can't do the action, the phrase dangles.</p><p class="trap"><strong>Trap:</strong> "Running down the street, the car hit a pedestrian" says the car was running.</p><ul><li>Wrong: Covered in mud, the football game was postponed.</li><li>Better: <u>Covered in mud</u>, the <b>players</b> left the field. <span class="note">(added)</span></li></ul></div><div class="card core" data-title="Quick checklist"><h2>Quick checklist</h2><ul><li>Participle + modifiers, describing a noun?</li><li>Present -ing, past -ed/-en, or perfect having + p.p.?</li><li>Is it next to the noun it describes?</li><li>Comma if the information is not essential.</li></ul><p class="note">Based on the Participial Phrase slides, and the practice sheet's dangling-participle section (the slides give no rule for it). Worksheet items were used only to check forms.</p></div></section><section class="topic" id="s7" data-topic="s7"><h1>Subject-Verb Agreement: Advanced Cheatsheet</h1><p class="sub">Definitions, rules, common traps, and examples for academic writing.</p><p class="key">In examples, the <u>underlined</u> word is the true subject and the <b>blue bold</b> word is the correct verb. Examples marked <span class="note">(added)</span> are mine, written to illustrate a word list or a contrast; the rest come from the slides and the practice test. [Brackets] show phrases to ignore.</p><div class="card core" data-title="Core definition">
+<h2>Core definition</h2>
+<p class="rule">A verb matches its <em>true subject</em> (the head noun): singular with singular, plural with plural. The nearest noun is not always the subject.</p>
+<p class="trap"><strong>Quick method:</strong> Cross out prepositional phrases, comma phrases, and relative clauses. Then match the verb to the main noun that is left.</p>
+<ul>
+<li>The <u>boy</u> [in brown shoes] <b>is</b> Mike.</li>
+<li>The <u>success</u> [of future negotiation on independence or greater autonomy] <b>is</b> linked to Serbia's desire for EU membership.</li>
+</ul>
+</div><div class="card big" data-title="1. Finding the true subject">
+<h2>1. Finding the true subject</h2>
+<p class="rule">The noun inside a prepositional phrase (of, in, on, for…) is never the subject.</p><p class="rule">Cross out the extras. What remains is the subject and verb.</p><p class="note">Ignore: prepositional phrases, appositives set off by commas or dashes, participial phrases (founded in 1969), and relative clauses (that was blowing…).</p><p class="trap"><strong>Trap:</strong> A plural noun right before the verb makes you want a plural verb.</p><p class="trap"><strong>Trap:</strong> Long phrases between the subject and verb can hide the real subject.</p>
+<ul>
+<li>The <u>subject</u> [of these books] <b>is</b> dogs.</li>
+<li>The <u>work</u> [of the "UN family" on such matters as trade, food, aviation, refugees, drugs and health] <b>has</b> mostly been done through its "specialized agencies".</li>
+<li>The massive <u>diversion</u>, [for irrigation of cotton-growing areas, of water from the Amu Darya (Oxus) and Syr Darya rivers,] <b>had</b> caused great environmental damage.</li>
+<li>The <u>idea</u> [of a holy war (jihad) against infidels] <b>is</b> as old as Islam.</li>
+<li>The Islamic Conference <u>Organization</u> (ICO), [founded in 1969,] <b>had</b> 57 members by 2001.</li>
+<li>The new <u>practices</u> [evolved in the UN's six decades of activity] <b>have</b> often required the use of soldiers…</li>
+<li><u>Predictions</u> [that Britain's entry into the European Community in 1973 would destroy the Commonwealth] <b>proved</b> wrong.</li>
+</ul>
+</div><div class="card" data-title="2. Collective nouns">
+<h2>2. Collective nouns</h2>
+<p class="rule">A collective noun names a group (company, government, department, team, club, association, organization). It takes a singular verb as one unit and a plural verb when the members act individually.</p><p class="trap"><strong>Trap:</strong> Mixing styles in one text. Pick one and stay consistent. British English often treats sports teams and clubs as plural.</p>
+<ul>
+<li>The <u>company</u> <b>has</b> approved the budget proposal.</li>
+<li>The marketing <u>department</u> <b>is</b> doing an impressive job.</li>
+<li>The <u>government</u> <b>is</b> spending millions of dollars to combat crime.</li>
+<li>(British) <u>Barcelona</u> <b>play</b> very well.</li>
+</ul>
+</div><div class="card" data-title="3. Along with, together with, including, in addition to, as well as, coupled with">
+<h2>3. Along with, together with, including, in addition to, as well as, coupled with</h2>
+<p class="rule">These phrases are interrupters, so they do not make the subject plural. The verb agrees with the subject before them.</p><p class="trap"><strong>Trap:</strong> "And" adds to the subject; "along with" does not. Also, in "a group of … including X", <em>group</em> is the subject.</p>
+<ul>
+<li>The <u>Prime Minister</u>, along with his diplomats, <b>attends</b> the 42nd ASEAN Summit in Indonesia.</li>
+<li>A <u>group</u> of Cambodian diplomats––including the Prime Minister––<b>attends</b> the 42nd ASEAN Summit in Indonesia.</li>
+<li>The <u>man</u> (in addition to his daughter) <b>lives</b> here.</li>
+</ul>
+</div><div class="card big" data-title="4. Joined subjects: and, or, nor">
+<h2>4. Joined subjects: and, or, nor</h2>
+<p class="rule"><strong>And:</strong> Two nouns joined by "and" are normally plural. They take a singular verb when they name <strong>one thing, dish, or process</strong>.</p><p class="trap"><strong>Trap:</strong> If you stress two separate items, use a plural verb ("Teaching and learning <em>are</em> different skills").</p><p class="rule"><strong>Or / nor:</strong> The verb agrees with the subject <strong>closest to it</strong>.</p><p class="trap"><strong>Trap:</strong> The order of the subjects changes the verb. Put the plural subject last to sound natural.</p>
+<ul>
+<li><u>Monitoring and Evaluation</u> <b>needs</b> to be conducted upon completion of the project.</li>
+<li><u>Fish and chips</u> <b>is</b> a classic meal. <span class="note">(added)</span></li>
+<li><u>Macaroni and cheese</u> <b>is</b> easy to make. <span class="note">(added)</span></li>
+<li>Neither Ben nor his <u>children</u> <b>enjoy</b> the movie.</li>
+<li>Neither the children nor <u>Ben</u> <b>enjoys</b> the movie. <span class="note">(added)</span></li>
+<li>Either the sub-monitors or the <u>monitor</u> <b>has</b> to submit the form to the administration office.</li>
+</ul>
+</div><div class="card" data-title="5. Indefinite pronouns, each and every">
+<h2>5. Indefinite pronouns, each and every</h2>
+<p class="rule"><strong>Singular:</strong> each, every, either, neither, nobody, and every- / some- / any- / no- words (everyone, someone, anyone, no one, nothing, anything); also each / neither / any one of + plural noun.<br/><strong>Plural:</strong> both, few, many, several.<br/><strong>Depends on the noun:</strong> some, all, most, none, any.</p><p class="trap"><strong>Trap:</strong> "Everyone" and "each student" feel plural in meaning but are singular in grammar.</p><p class="trap"><strong>Trap:</strong> "Each of the members" and "neither of the pictures" look plural, but the subject is <em>each</em> / <em>neither</em>.</p>
+<ul>
+<li><u>Each</u> student <b>is</b> going to be given an A+ grade.</li>
+<li><u>Each</u> of the committee members <b>finishes</b> reading the instructions.</li>
+<li><u>Neither</u> of the pictures <b>was</b> appealing.</li>
+<li><u>Nobody</u> in the classroom <b>was</b> able to answer.</li>
+<li><u>Few</u> students <b>were</b> absent.</li>
+</ul>
+</div><div class="card big" data-title="6. Confusing and uncountable nouns">
+<h2>6. Confusing and uncountable nouns</h2>
+<p class="rule">Memorize these groups.</p><div class="wrap"><table>
+<tr><th>Group</th><th>Rule</th><th>Examples</th></tr>
+<tr><td>Singular -s nouns</td><td>Singular verb</td><td>Statistics, physics, mathematics, measles, news</td></tr>
+<tr><td>Latin/<wbr/>Greek plurals</td><td>Learn singular and plural</td><td>alumnus/<wbr/>alumni, syllabus/<wbr/>syllabi, focus/<wbr/>foci, cactus/<wbr/>cacti, stimulus/<wbr/>stimuli, memorandum/<wbr/>memoranda, datum/<wbr/>data, forum/<wbr/>fora, criterion/<wbr/>criteria, bacterium/<wbr/>bacteria</td></tr>
+<tr><td>Same form for both</td><td>Check the context</td><td>sales, staff, spectrum (spectra), Chinese, Sudanese, Congolese, Togolese</td></tr>
+</table></div><p class="trap"><strong>Trap:</strong> Criteria, bacteria, and alumni are plural. Data is plural in formal academic writing (singular use is growing). Nationalities like "the Chinese" take a plural verb.</p><p class="rule">Uncountable nouns (furniture, advice, information, equipment, luggage, news) take a singular verb. Police, people, cattle and clergy take a plural verb.</p><p class="trap"><strong>Trap:</strong> "The police was" and "the furniture are" are errors. Use "a piece of advice" to count.</p>
+<ul>
+<li><u>Physics</u> <b>is</b> a required course. <span class="note">(added)</span></li>
+<li>The <u>news</u> <b>is</b> good. <span class="note">(added)</span></li>
+<li>The <u>criteria</u> <b>are</b> clear; the <u>criterion</u> <b>is</b> fairness. <span class="note">(added)</span></li>
+<li>The <u>data</u> <b>show</b> a clear trend. <span class="note">(added)</span></li>
+<li>The <u>Chinese</u> <b>are</b> attending. <span class="note">(added)</span></li>
+<li>All the <u>furniture</u> I bought <b>is</b> at my home now.</li>
+<li>A great deal of <u>advice</u> <b>was</b> given after the meeting.</li>
+<li>The <u>police</u> <b>were</b> told to be careful.</li>
+</ul>
+</div><div class="card big" data-title="7. Amounts, numbers, percents, and fractions">
+<h2>7. Amounts, numbers, percents, and fractions</h2>
+<p class="rule"><strong>Amounts:</strong> A plural amount of money, time, or distance seen as one total takes a singular verb. If you count the individual items, the verb is plural.</p><p class="trap"><strong>Trap:</strong> "Four hundred students" is one unit when it describes the turnout, but separate people when they do something.</p><p class="rule"><strong>A number of / the number of:</strong> A number of + plural noun takes a plural verb (it means "several"). The number of takes a singular verb because the subject is "number".</p><p class="note">Other "of" phrases: a majority of follows the noun after "of"; a group / team / contingent of is one unit.</p><p class="trap"><strong>Trap:</strong> The two phrases look almost the same but change the verb.</p><p class="rule"><strong>Percent and fractions:</strong> With percent and fractions (half, one-third, two-thirds, a fifth, a quarter, three quarters), the verb agrees with the noun after "of". A countable plural takes a plural verb; an uncountable or singular noun takes a singular verb.</p><p class="note">The percentage of is singular.</p><p class="trap"><strong>Trap:</strong> "Percent" and "half" don't decide the verb. The noun after "of" does.</p>
+<ul>
+<li><u>Five hundred dollars</u> <b>is</b> a huge amount of money for a construction worker.</li>
+<li><u>Three hours</u> <b>is</b> long enough to complete the journey.</li>
+<li><u>Four hundred students</u> <b>is</b> a big turnout.</li>
+<li>Four hundred <u>students</u> <b>register</b> for the event.</li>
+<li>A number of <u>refugees</u> from Honduras <b>have</b> fled to the United States through Mexico.</li>
+<li>The <u>number</u> of refugees from Syria to Eastern Europe <b>keeps</b> on rising.</li>
+<li>Five percent of the <u>students</u> <b>come</b> from the provinces.</li>
+<li>Ten percent of the <u>water</u> <b>is</b> contaminated.</li>
+<li>The <u>percentage</u> of drinkable water <b>is</b> low.</li>
+<li>The <u>percentage</u> of female students <b>is</b> rising.</li>
+</ul>
+</div><div class="card" data-title="8. Noun clauses as subjects">
+<h2>8. Noun clauses as subjects</h2>
+<p class="rule">A noun clause (that…, what…, whether…) used as a subject takes a <strong>singular</strong> verb. Two noun clauses joined by "and" take a <strong>plural</strong> verb.</p><p class="trap"><strong>Trap:</strong> The plural noun inside the clause ("students") is not the subject of the main verb.</p>
+<ul>
+<li><u>That a lot of students come from provinces this year</u> <b>is</b> surprising.</li>
+<li><u>That he is a good salesperson and that he instills a strong sense of nationalism</u> <b>have</b> earned him so much support among working-class Americans.</li>
+</ul>
+</div><div class="card" data-title="9. Inverted subjects (verb before subject)">
+<h2>9. Inverted subjects (verb before subject)</h2>
+<p class="rule">In inverted sentences, the real subject comes after the verb. "Here" and "there" are never subjects.</p><p class="note">A gerund subject (Going on a diet) is singular.</p><p class="trap"><strong>Trap:</strong> The word before the verb is not always the subject.</p>
+<ul>
+<li><u>Going on a diet</u> <b>requires</b> a lot of determination.</li>
+<li>Standing just outside the shop <b>are</b> my <u>parents</u>.</li>
+<li>Now <b>comes</b> the difficult <u>part</u>.</li>
+<li>Here <b>are</b> your <u>glasses</u>.</li>
+</ul>
+</div><div class="card" data-title="10. Relative clauses and 'one of'">
+<h2>10. Relative clauses and 'one of'</h2>
+<p class="rule">A who / that / which clause takes its verb from the noun right before it.</p><p class="note">In "one of the + plural noun", the main verb agrees with one. A following who-clause agrees with the plural noun.</p><p class="trap"><strong>Trap:</strong> The nearest noun is not always the one the verb agrees with. In "the children of the man who works with me", works agrees with man and the main verb agrees with children.</p>
+<ul>
+<li>The <u>children</u> of the man who <b>works</b> with me <b>have</b> broken the window.</li>
+<li><u>One</u> of my friends <b>has</b> asked a question.</li>
+<li>She is one of the <u>students</u> who <b>work</b> late.</li>
+</ul>
+</div><div class="card core" data-title="Final checklist">
+<h2>Final checklist</h2>
+<ul>
+<li>Find the head noun. Ignore prepositional phrases and interrupters.</li>
+<li>Is the subject one unit (money, time, group, title) or separate individuals?</li>
+<li>With or/nor, match the nearer subject. With "of", match the noun after it (percent, half) or the head (number, percentage).</li>
+<li>If the verb comes first, locate the real subject after it.</li>
+</ul>
+<p class="note">Based on the "Advanced Rules in Academic Writing" slides and the Advanced Level 7 subject-verb agreement test.</p>
+</div></section><p class="empty" id="empty">No matching rules. Try fewer or different words.</p></main>
+<script>
+const q=document.getElementById('q'),cnt=document.getElementById('count'),
+cards=[...document.querySelectorAll('.card')],secs=[...document.querySelectorAll('.topic')],
+orig=new Map(cards.map(c=>[c,c.innerHTML])),empty=document.getElementById('empty');
+let topic='all';
+function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+function highlight(card,terms){
+  card.innerHTML=orig.get(card);
+  if(!terms.length)return;
+  const re=new RegExp('('+terms.map(esc).join('|')+')','gi');
+  const w=document.createTreeWalker(card,NodeFilter.SHOW_TEXT),nodes=[];
+  while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{
+    if(!re.test(n.nodeValue)){re.lastIndex=0;return}
+    re.lastIndex=0;
+    const span=document.createElement('span');
+    span.innerHTML=n.nodeValue.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(re,'<mark>$1</mark>');
+    n.replaceWith(...span.childNodes);
+  });
+}
+function run(){
+  const terms=q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let shown=0;
+  cards.forEach(c=>{
+    const sec=c.closest('.topic'),inTopic=topic==='all'||sec.dataset.topic===topic;
+    const t=c.textContent.toLowerCase();
+    const ok=inTopic&&terms.every(x=>t.includes(x));
+    c.classList.toggle('hide',!ok);
+    if(ok)shown++;
+    highlight(c,ok?terms:[]);
+  });
+  secs.forEach(s=>{
+    const any=s.querySelector('.card:not(.hide)');
+    s.classList.toggle('hide',!any);
+  });
+  cnt.textContent=terms.length?shown+' match'+(shown===1?'':'es'):'';
+  empty.style.display=shown?'none':'block';
+}
+q.addEventListener('input',run);
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));
+  topic=b.dataset.f;run();
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}
+  if(e.key==='Escape'){q.value='';run();q.blur()}
+});
+</script></body></html>
